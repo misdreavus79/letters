@@ -1,0 +1,45 @@
+/*style.css*/
+@charset "utf-8";
+
+section{
+	color:  #45251C;
+}
+input[type=button]{
+	background: #AB001E;
+}
+input[type=button]:hover{
+	background:  #45251C;
+}
+input[type=button]:active{
+	color: #FFD700;
+}
+input[type=text]{
+	border: 2px solid  #45251C;
+}
+h1, h2{
+	color: #AB001E;
+}
+#start:active{
+	color:#FFD700;
+}
+#wordlist, #score{
+	color:  #45251C;
+}
+.lives{
+	color:  #45251C;
+}
+::-webkit-input-placeholder {
+   color:  #45251C;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color:  #45251C;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color:  #45251C;  
+}
+
+:-ms-input-placeholder {  
+   color:  #45251C;
+}
+

@@ -1,0 +1,45 @@
+/*style.css*/
+@charset "utf-8";
+
+section{
+	color:  #0000ff;
+}
+input[type=button]{
+	background: #CC8614;
+}
+input[type=button]:hover{
+	background:  #0000ff;
+}
+input[type=button]:active{
+	color: #FFD700;
+}
+input[type=text]{
+	border: 2px solid  #0000ff;
+}
+h1, h2{
+	color: #CC8614;
+}
+#start:active{
+	color:#FFD700;
+}
+#wordlist, #score{
+	color:  #0000ff;
+}
+.lives{
+	color:  #0000ff;
+}
+::-webkit-input-placeholder {
+   color:  #0000ff;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color:  #0000ff;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color:  #0000ff;  
+}
+
+:-ms-input-placeholder {  
+   color:  #0000ff;
+}
+
