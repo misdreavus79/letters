@@ -8,8 +8,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
 
 	entry: { 
-		app: './src/js/cards.js', 
-		vendor: ['react', 'react-dom'] 
+		app: './src/js/letters.js', 
+		vendor: ['react', 'react-dom', 'mobx', 'mobx-react', 'immutable']
 	},
 
 	output: {

@@ -8,8 +8,8 @@ module.exports = {
 	devtool: 'cheap-module-source-map',
 
 	entry: { 
-		app: './src/js/cards.js',
-		vendor: ['react', 'react-dom']
+		app: './src/js/letters.js',
+		vendor: ['react', 'react-dom', 'mobx', 'mobx-react', 'immutable']
 	},
 
 	output: {
