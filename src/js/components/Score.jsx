@@ -1,4 +1,5 @@
 import React from "react";
+import '../../scss/_score.scss';
 
 const Score = ({score}) => 
 

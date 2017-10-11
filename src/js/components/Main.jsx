@@ -4,14 +4,12 @@ import Guesses from './Guesses';
 import Board from './Board';
 import "../../scss/global.scss";
 
-const Main = ({ store }) => (
-    
+const Main = ({ props }) => (
 	<main className="main" role="main">
 		<Score />
 		<Board />
 		<Guesses />
 	</main>
-	
 );
 
 export default Main;

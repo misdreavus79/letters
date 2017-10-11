@@ -8,23 +8,6 @@ body{
 	padding-top: 1em;
 	background: rgba(190, 190, 190, .1);
 }
-.gameBoard{
-	width: 60%;
-	background: #fff;
-	text-align: center;
-	padding: 1em;
-	border-radius: 10px;
-	border: 1px solid rgba(0, 0, 0, .5);
-	margin-bottom: 2em;
-}
-.score, .wordlist{
-	width: 20%;
-	text-align: center;
-}
-.gameBoard, .score, .wordlist{
-	float: left;
-	box-sizing: border-box;
-}
 section{
 	color: #9400D3;
 }
@@ -83,24 +66,15 @@ sub{
 	margin-left: 9px;
 	bottom: -0.4em;
 }
-#start{
-	width:300px;
-	height:150px;
-	font-size:200%;
-	border-radius: 20px;
-}
-#start:active{
-	color:#FFD700;
-}
-#wordlist, #score{
+#guesses, #score{
 	font-variant: small-caps;
 	color: #9400D3;
 	font-weight: bold;
 }
-#wordlist{
+#guesses{
 	list-style: none;
 }
-#wordlist li{
+#guesses li{
 	font-size: 1.5em;
 }
 #score{

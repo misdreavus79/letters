@@ -1,8 +1,9 @@
 import React from 'react';
+import '../../scss/_startbutton.scss';
 
 const StartButton = ({ onClick }) => (
 	<button 
-		id="start"
+		className="start"
 		onClick={onClick}>
 		Start
 	</button>
