@@ -1,15 +1,13 @@
 import React from "react";
-import StartButton from './StartButton';
-import SubmitButton from './SubmitButton';
+import PlayButton from './PlayButton';
+import GuessButton from './GuessButton';
 import ShuffleButton from './ShuffleButton';
-import ResetButton from './ResetButton';
 
 const Controls = () => (
     <div className="gameControls">                    
-		<StartButton />
-		<SubmitButton />
+		<PlayButton />
+		<GuessButton />
 		<ShuffleButton />
-		<ResetButton />
 	</div>
 );
 

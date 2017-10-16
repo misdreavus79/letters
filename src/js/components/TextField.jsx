@@ -1,10 +1,9 @@
 import React from 'react';
 
-const TextField = ({ onChange }) => (
+const TextField = () => (
 	<input 
 		type="text" 
 		id="word" 
-		value={onChange} 
 		placeholder="enter your guess here" />
 )
 

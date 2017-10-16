@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../scss/_startbutton.scss';
 
-const StartButton = ({ onClick }) => (
+const PlayButton = ({ onClick }) => (
 	<button 
 		className="start"
 		onClick={onClick}>
@@ -9,4 +9,4 @@ const StartButton = ({ onClick }) => (
 	</button>
 )
 
-export default StartButton;
+export default PlayButton;
