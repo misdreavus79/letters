@@ -1,13 +1,9 @@
 import React from "react";
-import PlayButton from './PlayButton';
-import GuessButton from './GuessButton';
-import ShuffleButton from './ShuffleButton';
+import Button from './Button';
 
-const Controls = () => (
+const Controls = (props) => (
     <div className="gameControls">                    
-		<PlayButton />
-		<GuessButton />
-		<ShuffleButton />
+		{props.children}
 	</div>
 );
 

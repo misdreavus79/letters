@@ -3,15 +3,30 @@ import Title from './Title';
 import TextField from './TextField';
 import Controls from './Controls';
 import Time from './Time';
+import Button from './Button';
 import '../../scss/_gameboard.scss';
 
-const Board = ({message}) => (
-	<section className="gameBoard">
-		<Title />
-		<Time seconds="0" />
-		<TextField />
-		<Controls />
-	</section>
-);
+class Board extends React.Component {
+	componentDidMount(){
+		
+	}
+	render(){
+		return (
+			<section className="gameBoard">
+				<Title />
+				<Time seconds="0" />
+				<TextField />
+				<Button type="Start" />
+				<Controls>
+					<Button type="Play" />
+					<Button type="Guess" />
+					<Button type="Shuffle" />
+				</Controls>
+			</section>
+		)
+	}
+} 
+	
+
 
 export default Board;
