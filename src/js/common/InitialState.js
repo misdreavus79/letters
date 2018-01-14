@@ -1,4 +1,4 @@
-{
+export const initialState = {
 	"levels" : [
 		{
 			"letters" : ["a", "b", "c", "k", "l", "e"], 
