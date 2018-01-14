@@ -6,7 +6,8 @@ const TextField = ({onChange, value}) => (
 		type="text" 
 		className="textfield" 
 		placeholder="enter your guess here"
-		onChange={onChange} />
+		onChange={onChange}
+		value={value} />
 )
 
 export default TextField;

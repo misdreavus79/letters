@@ -2,7 +2,8 @@ export const initialState = {
 	"levels" : [
 		{
 			"letters" : ["a", "b", "c", "k", "l", "e"], 
-			"words" : ["ALE", "CAB", "ALEC", "BLEAK", "LAKE", "BAL", "BLAE", "ALB", "KEA", "CABLE", "LACK", "KALE", "BALE", "KAB", "KAE", "LAC", "ACE", "LEA", "ABLE", "LEAK"]
+			// "words" : ["ALE", "CAB", "ALEC", "BLEAK", "LAKE", "BAL", "BLAE", "ALB", "KEA", "CABLE", "LACK", "KALE", "BALE", "KAB", "KAE", "LAC", "ACE", "LEA", "ABLE", "LEAK"]
+			"words": ['ALE', 'CAB']
 		},
 		{
 			"letters" : ["d", "r", "e", "a", "d", "o"], 

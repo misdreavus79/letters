@@ -19,7 +19,8 @@ class Main extends React.Component {
 			letters: [],
 			words: [],
 			play: false,
-			wordsGuessed: []
+			wordsGuessed: [],
+			guess: ''
 		};
 		this.play = this.play.bind(this);
 		this.guess = this.guess.bind(this);
@@ -69,7 +70,8 @@ class Main extends React.Component {
 		this.setState({
 			message: message,
 			words: newWords,
-			wordsGuessed: guessedList
+			wordsGuessed: guessedList,
+			guess: ''
 		});
 	}
 	shuffle(){
@@ -101,7 +103,7 @@ class Main extends React.Component {
 						<Button type="Play" onClick={this.play} />
 						:
 						<form onSubmit={this.guess}>
-							<TextField onChange={this.updateText} />
+							<TextField onChange={this.updateText} value={this.state.guess} />
 							<Controls>
 								<Button type="Guess" />
 								<Button type="Shuffle" onClick={this.shuffle} />
