@@ -18,7 +18,7 @@ class Main extends React.Component {
 			allLevels: initialState.levels,
 			letters: [],
 			words: [],
-			play: false,
+			playing: false,
 			wordsGuessed: [],
 			guess: ''
 		};
@@ -26,6 +26,7 @@ class Main extends React.Component {
 		this.guess = this.guess.bind(this);
 		this.shuffle = this.shuffle.bind(this);
 		this.updateText = this.updateText.bind(this);
+		this.countdown = this.countdown.bind(this);
 	}
 	play(){
 		let newLevel = this.state.currentLevel,
@@ -44,11 +45,16 @@ class Main extends React.Component {
 		}
 		this.setState({
 			currentLevel: newLevel,
-			play: true,
+			playing: true,
 			letters: newLetters,
 			words: newWords,
-			message: 'Begin!'
+			message: `Level ${newLevel}: Begin!`,
+			wordsGuessed: [],
+			win: false,
+			time: 60
 		});
+
+		this.interval = setInterval(() => this.countdown(), 1000);
 	}
 	guess(e){
 		e.preventDefault();
@@ -60,12 +66,12 @@ class Main extends React.Component {
 		newWords = this.state.words.filter(el => {
 			return el !== guess.toUpperCase();
 		});
-
+		
 		if(newWords.length < this.state.words.length){
 			message = "You guessed it!";
 			guessedList.push(guess);
 		}else{
-			message = "Wrong!"
+			message = "Wrong!";
 		}
 		this.setState({
 			message: message,
@@ -73,6 +79,10 @@ class Main extends React.Component {
 			wordsGuessed: guessedList,
 			guess: ''
 		});
+
+		if(newWords.length === 0){ //guessed all words
+			this.endLevel(true);
+		}
 	}
 	shuffle(){
 		let newLetters = this.state.letters;
@@ -88,6 +98,26 @@ class Main extends React.Component {
 			guess: e.target.value
 		});
 	}
+	endLevel(win){
+		let message = (win) ? 'Onward!' : "Oh no!",
+			playing = false; 
+
+		this.setState({
+			message,
+			win,
+			playing
+		});
+		clearInterval(this.interval);
+	}
+	countdown(){
+		let time = this.state.time - 1;
+		this.setState({
+			time
+		});
+		if(time === 0 && this.state.words.length > 0){
+			this.endLevel(false);
+		}
+	}
 	render(){
 		return (
 			<main className="main" role="main">
@@ -97,12 +127,12 @@ class Main extends React.Component {
 					moves={this.state.moves} />
 				<Board>
 					<Title message={this.state.message} />
-					<Letters letters={this.state.letters} />
 					{
-						this.state.play === false ?
-						<Button type="Play" onClick={this.play} />
+						this.state.playing === false ?
+						<Button type={this.state.currentLevel === 0 ? "Play" : "Play Again"} onClick={this.play} />
 						:
 						<form onSubmit={this.guess}>
+							<Letters letters={this.state.letters} />
 							<TextField onChange={this.updateText} value={this.state.guess} />
 							<Controls>
 								<Button type="Guess" />

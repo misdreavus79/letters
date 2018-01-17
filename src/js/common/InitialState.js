@@ -76,6 +76,14 @@ export const initialState = {
 		{
 			"letters" : ["s", "c", "r", "a", "b", "i"], 
 			"words" : ["CRABS", "BASIC", "SAC", "CABS", "SCAR", "AIR", "ABRIS", "CRIBS", "SIR", "BRAS", "CARBS", "ARC", "CARS", "BIAS", "RABI", "ARCS", "RABIS", "BARS", "BAR", "BARIC"]
+		},
+		{
+			"letters" : ['e','s','a','d','e','l'],
+			"words:" : ['​SLED​', '​​ADS​', '​​AEDES​', '​​ALE​', '​ALEE​', '​ALES​', '​ALS​', '​​DAL​', '​DALE​', '​DALES​', '​DALS​', '​DAS​', '​​DEAL​', '​DEALS​', '​DEE​', '​DEES​', '​DEL​', '​DELE​', '​DELES​', '​DELS​', '​EASE​', '​EASED​', '​EASEL​', '​​EDS​', '​EEL​', '​EELS​', '​​ELD​', '​ELDS​', '​ELS​', '​ELSE​', '​​LAD​', '​LADE​', '​LADES​', '​LADS​', '​LAS​', '​LASE​', '​LASED​', '​LEA​', '​LEAD​', '​LEADS​', '​LEAS​', '​LEASE​', '​LEASED​', '​LED​', '​LEDE​', '​LEDES​', '​LEE​', '​LEES​', '​SAD​', '​SADE​', '​SAE​', '​SAL​', '​SALE​', '​SEA​', '​SEAL​', '​SEALED​', '​SEE​', '​SEED​', '​SEEL​', '​SEL​']
+		},
+		{
+			"letters" : ['a','b','c','k','l','e'],
+			"words" : ['​​ABLE​', '​ACE​', '​​ALB​', '​ALE​', '​ALEC​', '​​BACK​', '​BAKE​', '​BAL​', '​BALE​', '​BALK​', '​​BEAK​', '​BEAL​', '​BECK​', '​BEL​', '​​BLACK​', '​BLAE​', '​BLEAK​', '​​CAB​', '​CABLE​', '​CAKE​', '​CALK​', '​CEL​', '​​ELK​', '​​KAB​', '​KAE​', '​KALE​', '​KEA​', '​​LAB​', '​LAC​', '​LACE​', '​LACK​', '​LAKE​', '​LEA​', '​LEAK​', '​​LEK​']
 		}
 	]
 }
