@@ -20,7 +20,8 @@ class Main extends React.Component {
 			words: [],
 			playing: false,
 			wordsGuessed: [],
-			guess: ''
+			guess: '',
+			score: 0
 		};
 		this.play = this.play.bind(this);
 		this.guess = this.guess.bind(this);
@@ -58,13 +59,14 @@ class Main extends React.Component {
 	}
 	guess(e){
 		e.preventDefault();
-		let guess = this.state.guess,
+		let guess = this.state.guess.toUpperCase(),
 			newWords = [],
 			message = '',
-			guessedList = this.state.wordsGuessed;
+			guessedList = this.state.wordsGuessed,
+			score = this.state.score;
 		
 		newWords = this.state.words.filter(el => {
-			return el !== guess.toUpperCase();
+			return el !== guess;
 		});
 		
 		if(newWords.length < this.state.words.length){
