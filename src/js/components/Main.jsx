@@ -36,23 +36,21 @@ class Main extends React.Component {
 
 		if(this.state.win){ //if the player beat the previous level
 			newLevel++;
-			newLetters = this.state.allLevels[newLevel].letters;
-			newWords = this.state.allLevels[newLevel].words;
 		}
-		if(this.state.currentLevel === 0){ //if it's the beginning of the game
-			newLevel++;
-			newLetters = initialState.levels[0].letters;
-			newWords = initialState.levels[0].words;
-		}
+
+		newLetters = this.state.allLevels[newLevel].letters;
+		newWords = this.state.allLevels[newLevel].words;
+
 		this.setState({
 			currentLevel: newLevel,
 			playing: true,
 			letters: newLetters,
 			words: newWords,
-			message: `Level ${newLevel}: Begin!`,
+			message: `Level ${newLevel + 1}: Begin!`,
 			wordsGuessed: [],
 			win: false,
-			time: 60
+			time: 60,
+			score: 0
 		});
 
 		this.interval = setInterval(() => this.countdown(), 1000);
@@ -72,6 +70,7 @@ class Main extends React.Component {
 		if(newWords.length < this.state.words.length){
 			message = "You guessed it!";
 			guessedList.push(guess);
+			score += 100;
 		}else{
 			message = "Wrong!";
 		}
@@ -79,12 +78,14 @@ class Main extends React.Component {
 			message: message,
 			words: newWords,
 			wordsGuessed: guessedList,
-			guess: ''
+			guess: '',
+			score: score
+		}, 
+		() => {
+			if(newWords.length === 0){ //guessed all words
+				this.endLevel(true);
+			}
 		});
-
-		if(newWords.length === 0){ //guessed all words
-			this.endLevel(true);
-		}
 	}
 	shuffle(){
 		let newLetters = this.state.letters;
@@ -101,13 +102,28 @@ class Main extends React.Component {
 		});
 	}
 	endLevel(win){
-		let message = (win) ? 'Onward!' : "Oh no!",
-			playing = false; 
+		let message,
+			playing = false,
+			score;
+
+		if(win){
+			console.group("Scores");
+				console.log(this.state.score);
+				console.log(this.state.time * 100);
+				console.log(this.state);
+			console.groupEnd();
+			message = 'Onward!';
+			score = this.state.score + 100 * this.state.time;
+		}else{
+			message = "On no!";
+			score = this.state.score;
+		}
 
 		this.setState({
 			message,
 			win,
-			playing
+			playing,
+			score
 		});
 		clearInterval(this.interval);
 	}
