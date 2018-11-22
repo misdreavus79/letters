@@ -55,6 +55,7 @@ module.exports = {
 		new webpack.optimize.CommonsChunkPlugin({
 			name: "vendor" // vendor libs + extracted manifest
 	    }),
+	    // new webpack.optimize.ModuleConcatenationPlugin(),
 		new HtmlWebpackPlugin()
 	],
 

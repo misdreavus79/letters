@@ -131,10 +131,12 @@ class Main extends React.Component {
 		let time = this.state.time - 1;
 		this.setState({
 			time
+		},
+		() => {
+			if(time === 0 && this.state.words.length > 0){
+				this.endLevel(false);
+			}
 		});
-		if(time === 0 && this.state.words.length > 0){
-			this.endLevel(false);
-		}
 	}
 	render(){
 		return (

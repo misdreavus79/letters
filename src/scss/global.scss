@@ -3,6 +3,9 @@
 @import "normalize";
 @import "normal";
 
+body *{
+	box-sizing: border-box;
+}
 body{
 	font-family: 'Gloria Hallelujah', sans-serif;
 	padding-top: 1em;
@@ -10,26 +13,6 @@ body{
 }
 section{
 	color: #9400D3;
-}
-button{
-	background: #5cbcab;
-	color:#fff;
-	border:none;
-	min-width: 100px;
-	height: 50px;
-	font-weight: bold;
-	border-radius: 5px;
-}
-button:hover,
-button:focus{
-	background: #9400D3;
-	color: #fff;
-}
-button:focus{
-	outline:none;
-}
-button:active{
-	color: #FFD700;
 }
 input[type="text"]{
 	border-radius: 15px;
