@@ -1,47 +1,23 @@
 {
   "name": "letters",
-  "version": "2.0.0",
-  "description": "Classic TextTwist Game",
-  "main": "letters.js",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build:dev": "webpack --env=dev --progress --profile --colors",
-    "build:prod": "webpack --env=prod --progress --profile --colors",
-    "serve": "webpack-dev-server --env=dev"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/misdreavus79/letters.git"
-  },
-  "author": "Eli Moreta-Feliz",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/misdreavus79/letters/issues"
-  },
-  "homepage": "https://github.com/misdreavus79/letters#readme",
   "dependencies": {
-    "immutable": "^3.8.2",
-    "mobx": "^4.0.0",
-    "mobx-react": "^5.0.0",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
-    "babel-polyfill": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "chunk-manifest-webpack-plugin": "^1.1.0",
-    "css-loader": "^0.28.11",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "file-loader": "^1.0.0",
-    "html-webpack-plugin": "^3.0.0",
-    "inline-manifest-webpack-plugin": "^4.0.0",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.0",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.0.0",
-    "webpack-chunk-hash": "^0.6.0",
-    "webpack-dev-server": "^3.0.0"
+    "@next/font": "13.4.4",
+    "@types/node": "20.2.5",
+    "@types/react": "18.2.7",
+    "@types/react-dom": "18.2.4",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.4",
+    "next": "13.4.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.0.4"
   }
 }
